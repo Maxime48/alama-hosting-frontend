@@ -32,14 +32,14 @@ function handle_sql($name,$format)
 
         if ($format=="full")
         {
-            echo '<strong class="number" data-number="'.$value_id.'" ></strong>';
+            echo '<h2 class="achieve-counter">'.$value_id.'</h2>';
         }
         else
         {
             echo $value_id;
         }
     }
-    elseif ($name=="serversnumber")
+    elseif ($name=="users")
     {
         $query = "SELECT id FROM users";
 
@@ -59,7 +59,7 @@ function handle_sql($name,$format)
 
         if ($format=="full")
         {
-            echo '<strong class="number" data-number="'.$count.'" ></strong>';
+            echo '<h2 class="achieve-counter">'.$count.'</h2>';
         }
         else
         {
@@ -71,7 +71,7 @@ function handle_sql($name,$format)
 
 function core($name,$format)
 {
-    return handle_sql($name,$format);
+    echo handle_sql($name,$format);
 }
 
 return core($_GET["name"],$_GET["format"])
