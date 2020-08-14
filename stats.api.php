@@ -71,7 +71,7 @@ function handle_sql($name,$format)
 
 function core($name,$format)
 {
-echo $name . $format;
+    return handle_sql($name,$format);
 }
 
 return core($_GET["name"],$_GET["format"])
