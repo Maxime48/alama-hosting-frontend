@@ -72,7 +72,7 @@ function handle_sql($name,$format)
         $query2 = "UPDATE stats SET number = number + 1 WHERE name=$name";
 
         if ($result = $mysqli->query($query)) {
-            $row = $result->fetch_assoc()
+            $row = $result->fetch_assoc();
             $count = $row["number"];
             $result->free();
             $mysqli->query($query2);
