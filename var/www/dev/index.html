@@ -404,6 +404,7 @@
         $(function () {
             $("#includedContent").load("stats.api.php?name=users&format=full");
             $("#includedContent_2").load("stats.api.php?name=serversnumber&format=full");
+            $("#includedContent_3").load("stats.api.php?name=visits&format=full");
         });
     </script>
     <section class="achievement-section set-bg spad" data-setbg="img/achievement-bg.jpg">
@@ -426,7 +427,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-6">
                     <div class="achievement__item">
                         <span class="fa fa-cog"></span>
-                        <h2 class="achieve-counter">2468</h2>
+                        <div id="includedContent_3"></div>
                         <p>Visits</p>
                     </div>
                 </div>
