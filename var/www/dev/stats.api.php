@@ -4,7 +4,7 @@ Please connect this to your panel/shop
 */
 function handle_sql($name,$format)
 {
-    $mysqli = new mysqli("localhost", "", "", "");
+    $mysqli = new mysqli("localhost", "", "", ""); 
     if ($name=="serversnumber")
     {
         $query = "SELECT * FROM servers";
@@ -68,8 +68,8 @@ function handle_sql($name,$format)
     }
     elseif ($name=="visits")
     {
-        $query = "SELECT number FROM stats WHERE name=$name";
-        $query2 = "UPDATE stats SET number = number + 1 WHERE name=$name";
+        $query = "SELECT number FROM stats WHERE name='$name'";
+        $query2 = "UPDATE stats SET number = number + 1 WHERE name='$name'";
 
         if ($result = $mysqli->query($query)) {
             $row = $result->fetch_assoc();
