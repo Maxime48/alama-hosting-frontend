@@ -78,8 +78,6 @@ function handle_sql($name,$format)
             $mysqli->query($query2);
         }
 
-
-
         if ($format=="full")
         {
             echo '<h2 class="achieve-counter">'.$count.'</h2>';
