@@ -38,6 +38,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap"
         rel="stylesheet">
 
+    <!-- Js Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -397,20 +400,26 @@
     <!-- Pricing Section End -->
 
     <!-- Achievement Section Begin -->
+    <script>
+        $(function () {
+            $("#includedContent").load("stats.api.php?name=users&format=full");
+            $("#includedContent_2").load("stats.api.php?name=serversnumber&format=full");
+        });
+    </script>
     <section class="achievement-section set-bg spad" data-setbg="img/achievement-bg.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6">
                     <div class="achievement__item">
                         <span class="fa fa-user-o"></span>
-                        <h2 class="achieve-counter">2468</h2>
-                        <p>Clients</p>
+                        <div id="includedContent"></div>
+                        <p>Users</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 mx-auto">
                     <div class="achievement__item">
                         <span class="fa fa-clone"></span>
-                        <h2 class="achieve-counter">2468</h2>
+                        <div id="includedContent_2"></div>
                         <p>Server</p>
                     </div>
                 </div>
@@ -418,7 +427,7 @@
                     <div class="achievement__item">
                         <span class="fa fa-cog"></span>
                         <h2 class="achieve-counter">2468</h2>
-                        <p>Installs</p>
+                        <p>Visits</p>
                     </div>
                 </div>
             </div>
