@@ -66,6 +66,29 @@ function handle_sql($name,$format)
             echo $count;
         }
     }
+    elseif ($name=="visits")
+    {
+        $query = "SELECT number FROM stats WHERE name=$name";
+        $query2 = "UPDATE stats SET number = number + 1 WHERE name=$name"
+
+        if ($result = $mysqli->query($query)) {
+            $row = $result->fetch_assoc()
+            $count = $row["number"];
+            $result->free();
+            $mysqli->query($query2);
+        }
+
+
+
+        if ($format=="full")
+        {
+            echo '<h2 class="achieve-counter">'.$count.'</h2>';
+        }
+        else
+        {
+            echo $count;
+        }        
+    }
 
 }
 
@@ -74,6 +97,6 @@ function core($name,$format)
     echo handle_sql($name,$format);
 }
 
-return core($_GET["name"],$_GET["format"])
+return core(htmlspecialchars($_GET["name"]),htmlspecialchars($_GET["format"]))
 
 ?>
