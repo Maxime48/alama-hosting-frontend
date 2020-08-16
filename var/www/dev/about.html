@@ -2,16 +2,44 @@
 <html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Deerhost Template">
-    <meta name="keywords" content="Deerhost, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DEERHOST | Template</title>
+    <title>Alama Hosting</title>
+    <!--meta-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:image" content="img/logo2.png" class="next-head">
+  <meta name="keywords" content="server, hosting, cheap, fast, affordable, Garry's Mod, Team Fortress 2, Minecraft, Connan Exiles, SCP: Secret Laboratory, ARK Survival Evolved, Rust, FiveM, TeamSpeak, Mumble, Discord Bots, MariaDB, Redis, Onset, web hosting" />
+  <meta name="description" content="Create your own game servers. Unlimited slots and free SQL databases. hosting: Garry's Mod, Team Fortress 2, Minecraft, Connan Exiles, SCP: Secret Laboratory, ARK Survival Evolved, Rust, FiveM, TeamSpeak, Mumble, Discord Bots, MariaDB, Redis, Onset, web hosting." />
+  <meta name="subject" content="Server Hosting">
+  <meta name="language" content="EN">
+  <meta name="robots" content="all" />
+  <meta name="revised" content="Saturday, August 1st, 2020, 7 pm" />
+  <meta name="Classification" content="Business">
+  <meta name="author" content="Maxime Carlier, maxime@alama.eu">
+  <meta name="designer" content="Maxime Carlier">
+  <meta name="copyright" content="Alama Hosting">
+  <meta name="owner" content="Maxime Carlier">
+  <meta name="url" content="https://alama.eu/index.html">
+  <link rel="canonical" href="https://alama.eu/index.html" />
+  <meta name="identifier-URL" content="https://alama.eu/">
+  <meta name="directory" content="submission">
+  <meta name="category" content="Server Hosting">
+  <meta name="coverage" content="Worldwide">
+  <meta name="distribution" content="Global">
+  <meta name="rating" content="General">
+  <meta name="revisit-after" content="2 days">
+  <meta property="og:title" content="Alama Hosting - About" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://alama.eu/about.html" />
+  <meta property="og:image" content="https://alama.eu/img/backg-tile-2.jpg" class="next-head" />  
+  <meta name="og:description" content="Create your own game servers. Unlimited slots and free SQL databases. hosting: Garry's Mod, Team Fortress 2, Minecraft, Connan Exiles, SCP: Secret Laboratory, ARK Survival Evolved, Rust, FiveM, TeamSpeak, Mumble, Discord Bots, MariaDB, Redis, Onset, web hosting." /> 
+  <!--meta end-->
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap"
         rel="stylesheet">
+
+    <!-- Js Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -129,6 +157,13 @@
     <!-- Breadcrumb End -->
 
     <!-- About Section Begin -->
+    <script>
+        $(function () {
+            $("#includedContent").load("stats.api.php?name=users&format=full");
+            $("#includedContent_2").load("stats.api.php?name=serversnumber&format=full");
+            $("#includedContent_3").load("stats.api.php?name=visits&format=full");
+        });
+    </script>
     <section class="about-section spad">
         <div class="container">
             <div class="row">
@@ -139,30 +174,23 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about__text">
-                        <h2>Welcom to Deerhost</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                            viverra maecenas accumsan lacus vel facilisis.</p>
+                        <h2>Alama Hosting</h2>
+                        <p>Hosting made simple .</p>
                         <div class="about__achievement">
                             <div class="about__achieve__item">
                                 <span class="fa fa-user-o"></span>
-                                <h4 class="achieve-counter">2468</h4>
-                                <p>Clients</p>
-                            </div>
-                            <div class="about__achieve__item">
-                                <span class="fa fa-edit"></span>
-                                <h4 class="achieve-counter">2468</h4>
-                                <p>Domains</p>
+                                <div id="includedContent"></div>
+                                <p>Users</p>
                             </div>
                             <div class="about__achieve__item">
                                 <span class="fa fa-clone"></span>
-                                <h4 class="achieve-counter">2468</h4>
+                                <div id="includedContent_2"></div>
                                 <p>Server</p>
                             </div>
                             <div class="about__achieve__item">
                                 <span class="fa fa-cog"></span>
-                                <h4 class="achieve-counter">2468</h4>
-                                <p>Installs</p>
+                                <div id="includedContent_3"></div>
+                                <p>Visits</p>
                             </div>
                         </div>
                         <a href="#" class="primary-btn">Get started now</a>
@@ -187,43 +215,43 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="feature__item">
                         <span class="fa fa-cloud-upload"></span>
-                        <h5>Auto update</h5>
-                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h5>Manual Updates</h5>
+                        <p>A new version of your server has been released ? hit the re-install button !.</p><br>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="feature__item">
                         <span class="fa fa-sliders"></span>
-                        <h5>Optimized software</h5>
-                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+                        <h5>Modern software</h5>
+                        <p>We use modern open source tools to provide the best hosting possible with an easily understandable panel.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="feature__item">
                         <span class="fa fa-database"></span>
-                        <h5>Daily backups</h5>
-                        <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <h5>Backups</h5>
+                        <p>You can save your whole server before doing something risky !.</p><br>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="feature__item">
                         <span class="fa fa-globe"></span>
-                        <h5>Wide networking</h5>
-                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h5>DDOS protection</h5>
+                        <p>You are potected by OVH's anti-ddos mitigation.</p><br><br>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="feature__item">
                         <span class="fa fa-shield"></span>
                         <h5>Protected</h5>
-                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+                        <p>All servers run in isolated Docker containers that limit attack vectors, security is a first-class citizen with bcrypt hashing, AES-256-CBC encryption.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="feature__item">
                         <span class="fa fa-headphones"></span>
                         <h5>Free support</h5>
-                        <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <p>We will never ask for extra money to provide support, just open a ticket on discord/panel/support.alama.eu .</p><br>
                     </div>
                 </div>
             </div>
@@ -240,28 +268,21 @@
                         <h3>Meet our team</h3>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="team__btn">
-                        <a href="#" class="primary-btn">View all</a>
-                    </div>
-                </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="team__item">
                         <div class="team__pic">
-                            <img src="img/team/team-1.jpg" alt="">
+                            <img src="img/team/unnamed.jpg" alt="">
                         </div>
                         <div class="team__text">
-                            <h5>Sabrina Carpenter</h5>
-                            <span>Chief executive officer</span>
-                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua.</p>
+                            <h5>Maxime Carlier</h5>
+                            <span>Co-founder and technical director</span>
+                            <p>Dealing all day with support and technical problems.</p>
                             <div class="team__social">
-                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="https://twitter.com/Maximus_48" class="twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="https://youtube.com/maxime_48" class="youtube"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://www.instagram.com/maxime_49_/" class="instagram"><i class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -269,18 +290,14 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="team__item">
                         <div class="team__pic">
-                            <img src="img/team/team-2.jpg" alt="">
+                            <img src="img/team/a_47b8098774a03f9baf195b7cee2484d0.gif" alt="">
                         </div>
                         <div class="team__text">
-                            <h5>Sabrina Carpenter</h5>
-                            <span>Software engineer</span>
-                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua.</p>
+                            <h5>Vincent Brach</h5>
+                            <span>Co-founder and financial director</span>
+                            <p>Directing Alama Hosting's financial decisions.</p>
                             <div class="team__social">
-                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="https://twitter.com/brach_v" class="twitter"><i class="fa fa-twitter"></i></a>
                             </div>
                         </div>
                     </div>
@@ -288,38 +305,12 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="team__item">
                         <div class="team__pic">
-                            <img src="img/team/team-3.jpg" alt="">
+                            <img src="img/team/4836a8fc70bd03dd7608de8c2df18477.png" alt="">
                         </div>
                         <div class="team__text">
-                            <h5>Sabrina Carpenter</h5>
-                            <span>Support representative</span>
-                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua.</p>
-                            <div class="team__social">
-                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="team__item">
-                        <div class="team__pic">
-                            <img src="img/team/team-4.jpg" alt="">
-                        </div>
-                        <div class="team__text">
-                            <h5>Sabrina Carpenter</h5>
-                            <span>Product director</span>
-                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua.</p>
-                            <div class="team__social">
-                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                            </div>
+                            <h5>Dino_leo</h5>
+                            <span>Comunity moderator</span>
+                            <p>Moderating dissidents since 3 years.</p> <br>
                         </div>
                     </div>
                 </div>
